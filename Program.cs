@@ -1,5 +1,4 @@
-﻿// Program.cs
-using RadiationCalculations;
+﻿using RadiationCalculations;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -103,6 +102,11 @@ class Program
 
         // Calculations and results
         Console.WriteLine("\n==== CALCULATION RESULTS ====");
+        Console.WriteLine("\n" + sourceName);
+        Console.WriteLine($"Dose rate: {source.DoseRate_uSvPerHour:F2} µSv/h");
+        Console.WriteLine($"Exposure time: {source.ExposureTime_h:F2} h");
+        Console.WriteLine($"Distance: {source.Distance_cm:F2} cm");
+        
         var result = new EffectiveDoseResult();
 
         foreach (var organ in exposures)
